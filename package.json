@@ -1,0 +1,23 @@
+{
+  "name": "wuxi-foodsafety-alert",
+  "version": "1.0.0",
+  "description": "Daily scraper for Wuxi Market Supervision Administration food safety announcements",
+  "main": "scraper/index.js",
+  "scripts": {
+    "start": "node scraper/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scraper",
+    "food-safety",
+    "wuxi",
+    "openai",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "openai": "^4.0.0"
+  }
+}
