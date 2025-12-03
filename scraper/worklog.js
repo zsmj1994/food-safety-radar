@@ -12,7 +12,9 @@ async function main() {
             console.log('Sending webhook notification...');
             const payload = {
                 msgtype: "markdown", // Example for DingTalk/Feishu, or just generic JSON
-                content: `### 🚨 worklog提示: 别忘了记日志`
+                markdown: {
+                    content: `### 🚨 worklog提示: 别忘了记日志`
+                }
             };
 
             const result = await axios.post(webhookUrl, payload);
