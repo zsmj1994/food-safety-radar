@@ -14,9 +14,7 @@ async function main() {
                 msgtype: "markdown", // Example for DingTalk/Feishu, or just generic JSON
                 content: {
                     text: `### 🚨 worklog提示: 别忘了记日志\n\n`
-                },
-                // Generic fallback
-                text: `Found ${newItems.length} new announcements:\n` + newItems.map(item => `${item.date}: ${item.title} - ${item.url}`).join('\n')
+                }
             };
 
             await axios.post(webhookUrl, payload);
