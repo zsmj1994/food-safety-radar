@@ -12,13 +12,11 @@ async function main() {
             console.log('Sending webhook notification...');
             const payload = {
                 msgtype: "markdown", // Example for DingTalk/Feishu, or just generic JSON
-                content: {
-                    text: `### 🚨 worklog提示: 别忘了记日志\n\n`
-                }
+                content: `### 🚨 worklog提示: 别忘了记日志`
             };
 
-            await axios.post(webhookUrl, payload);
-            console.log('Webhook sent successfully.');
+            const result = await axios.post(webhookUrl, payload);
+            console.log('Webhook sent successfully.', result.data);
         } catch (error) {
             console.error('Error sending webhook:', error.message);
         }
